@@ -1,0 +1,10 @@
+Time complexity
+Constant time - Big O(1)
+Linear time - Big O(n)
+Big O(1) < Big O(log n) < Big O(√n) < Big O(n) < Big O(n^2)...
+
+Space complexity
+Capacity
+Viertual Memory > RAM > Cache Level 1 > Cache Level 2 > Register
+Speed
+Register > Cache Level 2 > Cache Level 1 > RAM > Viertual Memory
