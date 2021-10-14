@@ -8,3 +8,12 @@ Capacity
 Viertual Memory > RAM > Cache Level 1 > Cache Level 2 > Register
 Speed
 Register > Cache Level 2 > Cache Level 1 > RAM > Viertual Memory
+
+Time complexity of sorting algorithms
+Binary search = Big O(log n)
+Linear search = Big O(n)
+Selection sort = Big O(n²)
+Bubble Sort = Big O(n²)
+Quick Sort = Big O(n²)
+Insertion Sort = Big O(n²)
+Merge Sort = O(n*Log n)
