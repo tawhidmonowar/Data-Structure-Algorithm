@@ -1,26 +1,48 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+#define ll long long
+
+pair<long long, long long> getMinMax(long long a[], int n) ;
 
 int main()
 {
-    int i,minX,maxX,arr[5]={0,5,1,2,9};
-
-    minX=arr[0];
-    maxX=arr[0];
-
-    for(i=0;i<5;i++)
+    int t;
+    cin >> t;
+    while (t--)
     {
-        if(arr[i]<minX)
+        int n;
+        cin >> n;
+        ll a[n];
+        for (int i = 0; i < n; i++)
+            cin >> a[i];
+
+        pair<ll, ll> pp = getMinMax(a, n);
+
+        cout << pp.first << " " << pp.second << endl;
+    }
+    return 0;
+}
+
+
+pair<long long, long long> getMinMax(long long a[], int n)
+{
+
+    int i,min=a[0],max=a[0];
+    pair<long long, long long> p;
+
+    for(i=0; i<n; i++)
+    {
+        if(min>a[i])
         {
-            minX=arr[i];
+            min=a[i];
         }
-        if(arr[i]>maxX)
+        if(max<a[i])
         {
-            maxX=arr[i];
+            max=a[i];
         }
     }
 
-    cout << "Min: " << minX << "\nMax: " << maxX;
+    p.first = min, p.second = max;
+    return p;
 
-    return 0;
 }
