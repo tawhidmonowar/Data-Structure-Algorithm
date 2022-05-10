@@ -1,37 +1,49 @@
-#include <iostream>
+// { Driver Code Starts
+#include<bits/stdc++.h>
 using namespace std;
 
-int main()
+
+
+ // } Driver Code Ends
+class Solution
 {
-    int i,j,n;
-    cin >> n;
-    int a[n];
+    public:
+    void sort012(int a[], int n)
+    {
+        
+        // coode here
+        return sort(a,a+n);
+        
+    }
+    
+};
 
-    for(i=0; i<n; i++)
-    {
-        cin >> a[i];
-    }
-    for(i=0; i<n; i++)
-    {
-        if(a[i]==0)
-        {
-            cout<<a[i] << " ";
-        }
-    }
-    for(i=0; i<n; i++)
-    {
-        if(a[i]==1)
-        {
-            cout<<a[i] << " ";
-        }
-    }
-    for(i=0; i<n; i++)
-    {
-        if(a[i]==2)
-        {
-            cout<<a[i] << " ";
-        }
-    }
+// { Driver Code Starts.
+int main() {
 
+    int t;
+    cin >> t;
+
+    while(t--){
+        int n;
+        cin >>n;
+        int a[n];
+        for(int i=0;i<n;i++){
+            cin >> a[i];
+        }
+
+        Solution ob;
+        ob.sort012(a, n);
+
+        for(int i=0;i<n;i++){
+            cout << a[i]  << " ";
+        }
+
+        cout << endl;
+        
+        
+    }
     return 0;
 }
+
+  // } Driver Code Ends
