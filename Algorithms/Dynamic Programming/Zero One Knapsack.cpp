@@ -11,13 +11,15 @@ int zeroOneKnapsack(item x[], int n, int capacity)
     int i,j,mat[n+1][capacity+1],temp,capTemp;
     set<int> s;
 
-    for(i=0; i<=n; i++)
+    for (i=0; i<=n; i++)
     {
-        for(j=0; j<=capacity; j++)
-        {
-            mat[i][j]=0;
-        }
+        mat[i][0]=0;
     }
+    for (j=0; j<=capacity; j++)
+    {
+        mat[0][j]=0;
+    }
+
 
     for(i=1; i<=n; i++)
     {
