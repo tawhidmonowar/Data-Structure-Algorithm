@@ -12,7 +12,7 @@ int main()
 
     vector<int>adj[maxn];
 
-    for(i=0;i<e;i++)
+    for(i=0; i<e; i++)
     {
         int a,b;
         cin >>a>>b;
@@ -20,25 +20,25 @@ int main()
         adj[b].push_back(a);
     }
 
-    queue <int> que;
+    stack <int> sta;
     int start,temp;
     cout << "Enter Starting node: ";
     cin >> start;
-    que.push(start);
-    int vis[maxn]={0};
+    sta.push(start);
+    int vis[maxn]= {0};
 
-    while(!que.empty())
+    while(!sta.empty())
     {
-        temp = que.front();
+        temp = sta.top();
         cout << temp<<",";
-        que.pop();
+        sta.pop();
 
-        for(i=0;i<adj[temp].size();i++)
+        for(i=0; i<adj[temp].size(); i++)
         {
             if(!vis[adj[temp][i]])
             {
                 vis[adj[temp][i]]=1;
-                que.push(adj[temp][i]);
+                sta.push(adj[temp][i]);
             }
         }
     }
